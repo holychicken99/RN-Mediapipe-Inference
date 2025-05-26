@@ -1,12 +1,12 @@
-import { NativeModule, requireNativeModule } from 'expo';
+import { NativeModule, requireNativeModule } from "expo";
 
-import { ExpoSettingsModuleEvents } from './ExpoSettings.types';
+import { ExpoSettingsModuleEvents } from "./ExpoSettings.types";
 
 declare class ExpoSettingsModule extends NativeModule<ExpoSettingsModuleEvents> {
-  PI: number;
   hello(): string;
-  setValueAsync(value: string): Promise<void>;
+  initialize(): Promise<boolean>;
+  generate(prompt: string): Promise<string>;
 }
 
 // This call loads the native module object from the JSI.
-export default requireNativeModule<ExpoSettingsModule>('ExpoSettings');
+export default requireNativeModule<ExpoSettingsModule>("ExpoSettings");
