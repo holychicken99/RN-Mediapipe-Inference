@@ -3,8 +3,7 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "expo-settings": ["../src/index"],
-      "expo-settings/*": ["../src/*"]
+      "RNMediapipline": ["../src/index"]
     }
   }
 }

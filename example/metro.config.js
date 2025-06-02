@@ -19,7 +19,7 @@ config.resolver.nodeModulesPaths = [
 ];
 
 config.resolver.extraNodeModules = {
-  'expo-settings': '..',
+  'RNMediapipeline': '..',
 };
 
 config.watchFolders = [path.resolve(__dirname, '..')];

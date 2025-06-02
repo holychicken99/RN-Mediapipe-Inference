@@ -1,7 +1,4 @@
-package expo.modules.settings
-
-// Standard Java/Kotlin imports
-// MediaPipe imports
+package com.rnmediapipe
 
 import android.util.Log
 import com.google.mediapipe.tasks.genai.llminference.LlmInference
@@ -12,13 +9,13 @@ import expo.modules.kotlin.modules.ModuleDefinition
 import java.io.File
 import kotlinx.coroutines.*
 
-class ExpoSettingsModule : Module() {
+class ReactNativeMediapipe : Module() {
     // instance of llm inference
     private var llmInference: LlmInference? = null
     private val scope = CoroutineScope(Dispatchers.IO + SupervisorJob())
 
     override fun definition() = ModuleDefinition {
-        Name("ExpoSettings")
+        Name("ReactNativeMediapipe")
 
         Function("hello") { "Hello world! 👋" }
 
@@ -85,7 +82,7 @@ class ExpoSettingsModule : Module() {
                     val taskOptions =
                             LlmInference.LlmInferenceOptions.builder()
                                     .setModelPath(modelPath)
-                                    .setPreferredBackend(Backend.GPU)
+                                    .setPreferredBackend(Backend.CPU)
                                     .setMaxTokens(512)
                                     .setMaxTopK(64)
                                     .build()
@@ -169,3 +166,7 @@ class ExpoSettingsModule : Module() {
 //         throw Exception("Model file not found: $modelPath")
 //     }
 // }
+                                "Model file exists but cannot be read. Check permissions.",
+                                null
+                        )
+                        return@launch

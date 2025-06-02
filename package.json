@@ -1,7 +1,7 @@
 {
-  "name": "expo-settings",
+  "name": "react-native-mediapipe-llm",
   "version": "0.1.0",
-  "description": "My new module",
+  "description": "React Native bindings for MediaPipe LLM Inference",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
@@ -18,16 +18,15 @@
   "keywords": [
     "react-native",
     "expo",
-    "expo-settings",
-    "ExpoSettings"
+    "mediapipe",
+    "llm"
   ],
-  "repository": "https://github.com/holychicken99/expo-settings",
+  "repository": "https://gitlab.com/HolyChicken99/react-native-mediapipe-llm",
   "bugs": {
-    "url": "https://github.com/holychicken99/expo-settings/issues"
+    "url": "https://gitlab.com/HolyChicken99/react-native-mediapipe-llm"
   },
-  "author": "HolyChicken99 <akshit.singh20@gmail.com> (https://github.com/holychicken99)",
+  "author": "HolyChicken99",
   "license": "MIT",
-  "homepage": "https://github.com/holychicken99/expo-settings#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/react": "~19.0.0",

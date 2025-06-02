@@ -1,9 +1,9 @@
 import { useEvent } from "expo";
-import ExpoSettings from "expo-settings";
+import RNMediapipelineModule from "RNMediapipeline";
 import { Button, SafeAreaView, ScrollView, Text, View } from "react-native";
 
 export default function App() {
-  const onChangePayload = useEvent(ExpoSettings, "onChange");
+  // const onChangePayload = useEvent(RNMediapipeline, "onChange");
 
   return (
     <SafeAreaView style={styles.container}>
@@ -18,7 +18,7 @@ export default function App() {
             title="Set value"
             onPress={async () => {
               const pol = await ExpoSettings.initialize();
-              console.log("value is ", pol);
+              console.log("model finally loaded ", pol);
             }}
           />
         </Group>

@@ -1,9 +1,6 @@
 {
-  "platforms": ["apple", "android", "web"],
-  "apple": {
-    "modules": ["ExpoSettingsModule"]
-  },
+  "platforms": [ "android"],
   "android": {
-    "modules": ["expo.modules.settings.ExpoSettingsModule"]
+    "modules": ["com.rnmediapipe.RNMediapipeline"]
   }
 }
