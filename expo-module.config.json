@@ -1,6 +1,6 @@
 {
   "platforms": [ "android"],
   "android": {
-    "modules": ["com.rnmediapipe.RNMediapipeline"]
+    "modules": ["com.rnmediapipe.ReactNativeMediapipe"]
   }
 }
