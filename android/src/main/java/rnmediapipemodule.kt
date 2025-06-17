@@ -81,6 +81,15 @@ class ReactNativeMediapipe : Module() {
 
         // }
         AsyncFunction("initialize") { promise: Promise ->
+
+
+            if (isInitialized) {
+                sendEvent("onLLMReady", mapOf("status" to "ready"))
+                Log.d("LLMModule", "Starting initialization...")
+                promise.resolve(true)
+                return@AsyncFunction
+            }
+
             scope.launch {
                 try {
                     Log.d("LLMModule", "Starting initialization...")
